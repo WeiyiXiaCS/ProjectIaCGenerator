@@ -1,0 +1,11 @@
+#login docker to the ECR
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 184615902119.dkr.ecr.eu-west-1.amazonaws.com
+
+#build the docker image
+docker build -t frontendweiyi .
+
+#tag the image to upload to ecr
+docker tag frontendweiyi:latest 184615902119.dkr.ecr.eu-west-1.amazonaws.com/frontendweiyi:latest
+
+#push to the repo
+docker push 184615902119.dkr.ecr.eu-west-1.amazonaws.com/frontendweiyi:latest
