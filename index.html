@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution Architect Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Solution Architect Advisor</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="files" multiple>
+        <button type="submit">Upload Files</button>
+    </form>
+    <div class="container">
+        <div class="bucket">
+            <h2>Brut Information</h2>
+            <div id="processingStatus"></div>
+            <ul id="filesListBucket1"></ul>
+            <div id="summaryResult"></div>
+            <div id="summaryMessage"></div>
+        </div>
+    </div>
+    <div id="consistencyCheck">
+        <h2>Consistency Check</h2>
+        <div id="consistencyResult"></div>
+        <div id="consistencyMessage"></div>
+        <div class="button-group">
+            <button onclick="checkConsistency()">Check Consistency</button>
+            <button id="addInfoButton" onclick="showAddInfoZone()">Add Information</button>
+            <button id="acceptButton" style="display: none;">Accept</button>
+        </div>
+    </div>
+    <div id="additionalInformation" style="display: none;">
+        <h2>Additional Information</h2>
+        <form id="addInfoForm" class="additional-info-form">
+            <label for="filename">Filename:</label>
+            <select id="filename"></select>
+            <label for="additionalInfo">Information:</label>
+            <textarea id="additionalInfo"></textarea>
+            <button type="button" onclick="addInformation()">Add Information</button>
+            <button type="button" onclick="hideAddInfoZone()">Quit</button>
+        </form>
+        <div id="addInfoMessage"></div>
+    </div>
+    <div id="summaryZone" class="summary-display">
+        <h2>Project Summary</h2>
+    </div>
+    <div class="summary-container">
+        <div class="summary-area">
+            <h2>Backlog Generation</h2>
+            <button type="button" onclick="generateBacklog()">Generate Backlog</button>
+            <p id="backlogMessage" class="message"></p>
+            <div id="backlogResult" class="summary"></div> 
+        </div>
+    </div>
+    <div class="button-group">
+        <button type="button" onclick="editBacklog()">Edit Backlog</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

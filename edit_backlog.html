@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Backlog</title>
+    <link rel="stylesheet" href="edit_backlog.css">
+</head>
+<body>
+    <div id="editBacklogPage">
+        <h1>Edit Backlog</h1>
+        <form id="editBacklogForm">
+            <!-- User stories will be dynamically inserted here -->
+        </form>
+        <button id="resetButton" onclick="resetBacklog()">Reset</button>
+        <button id="cancelButton" onclick="confirmCancel()">Cancel</button>
+        <button id="saveButton" onclick="saveBacklog()">Save</button>
+        <button id="startTaskButton">Start Task</button>
+        <div id="processingMessage"></div>
+        <button id="showSolutionButton" style="display:none;">Show me the solution</button>    
+    </div>
+    <script src="edit_backlog.js"></script>
+</body>
+</html>
